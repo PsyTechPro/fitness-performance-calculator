@@ -1,0 +1,15 @@
+packages:
+  "framer-motion": "For page transitions and smooth UI animations"
+  "@hookform/resolvers": "Zod validation for the calculator form"
+  "zustand": "Global state management for calculator results"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes"
+
+images:
+  - path: "artifacts/fitness-calculator/public/images/gym-bg.png"
+    description: "Dark, gritty, atmospheric gym environment with dramatic overhead lighting, subtle fog, industrial metallic textures, and a dark vignette. High contrast, neon orange accents, masculine athletic vibe. Abstract and blurred."
+    aspect_ratio: "16:9"
+
+notes:
+  - Uses zustand for state management across pages to avoid query parameters or complex routing state
+  - Calculations are handled entirely client-side

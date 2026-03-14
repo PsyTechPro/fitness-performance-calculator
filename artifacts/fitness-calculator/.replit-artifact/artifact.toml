@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Fitness Performance Calculator"
+version = "1.0.0"
+id = "artifacts/fitness-calculator"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 19091
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/fitness-calculator run dev"
+
+[services.env]
+PORT = "19091"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/fitness-calculator", "run", "build"]
+publicDir = "artifacts/fitness-calculator/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
